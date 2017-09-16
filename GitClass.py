@@ -3,20 +3,19 @@ import sys
 	
 
 class GitOperations:
-	
+	""" Some basic git operations applicable to the current project"""
 	def __init__(self, name, password):
 	    self.git_object = Github(name, password)
             self.user = self.git_object.get_user()
 
 	def create_repo(self, repo_name):
+		
             """ Creates a new repository an returns a repository"""
-            return False
+            repo = self.user.create_repo(repo_name)
+	    return repo				
+		
                 
         def delete_repo(self, repo_name):
             """ Deletes the repo_name if it exists in the repository"""
-            return False
-
-
-if __name__ == "__main__":
-	unittest.main()
-			    
+            repo = self.user.get_repo(repo_name)
+	    repo.delete()
