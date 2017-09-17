@@ -1,9 +1,8 @@
 # language : python2
 
-
 # dependencies
-google-api-python-client
-PyGithub
+1. google-api-python-client 
+2. PyGithub
 
 # before proceeding with any of the script run the command: (deleting a .credential home in home directory if any)
 rm -r ~/.credentials/ 
