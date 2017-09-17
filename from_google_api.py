@@ -16,7 +16,8 @@ except ImportError:
     flags = None
 
 # Scopes
-SCOPES = 'https://www.googleapis.com/auth/classroom.coursework.students https://www.googleapis.com/auth/classroom.rosters https://www.googleapis.com/auth/classroom.coursework.students.readonly https://www.googleapis.com/auth/classroom.rosters'
+# Create, delete and list
+SCOPES = 'https://www.googleapis.com/auth/classroom.courses'
 CLIENT_SECRET_FILE = 'client_secret.json'
 APPLICATION_NAME = 'Classroom API Python Quickstart'
 course_name = "test_course"
@@ -54,4 +55,3 @@ def get_credentials():
             credentials = tools.run(flow, store)
         print('Storing credentials to ' + credential_path)
     return credentials
-
