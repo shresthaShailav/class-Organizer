@@ -34,6 +34,3 @@ class classRoomOperations:
     def update_assignment(self, course_id, assignment_file):
         """ Updates the assignment of the course if all the students have submitted the assignment"""
         return None
-        
-if __name__ == "__main__":
-    main()
