@@ -45,7 +45,7 @@ class Test_GitOperations(unittest.TestCase):
         self.assertTrue(repo_name in repo_names)
           
         # delete repository
-        repo.delete()
+        self.my_git_obj.delete_repo(repo_name)
         
         # from PyGithub documentation
         try:
